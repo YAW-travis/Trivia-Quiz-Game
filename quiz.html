@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CareerGhana Quiz App</title>
+    <meta name="description" content="CareerGhana Pop Quiz">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<main class="page-shell">
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+    <div class="background-shape shape-three"></div>
+    <section class="quiz-card">
+        <header class="quiz-header">
+            <a class="brand" href="#" aria-label="CareerGhana">
+                <img src="Careerghana.jpg" alt="CareerGhana logo">
+            </a>
+            <div class="brand-info">
+                <h1>CareerGhana </h1>
+                <p1>Pop-Quiz</p>
+                <p>Your Journey To Success</p>
+            </div>
+            <div class="score-pill">
+                <span>Score</span>
+                <strong id="score">0</strong>
+            </div>
+        </header>
+        <div id="loading-view" class="loading-view">
+            <div class="loading-circle">
+                <div class="loading-cap">🎓</div>
+            </div>
+            <h2>Loading your challenge...</h2>
+            <p>Fetching five questions from the CareerGhana vault.</p>
+        </div>
+        <div id="quiz-view" class="hidden">
+            <div class="progress-row">
+                <span id="question-count">Question 1 of 5</span>
+                <span id="category">General Knowledge</span>
+            </div>
+            <div class="progress-track">
+                <div id="progress-bar"></div>
+            </div>
+            <div class="question-area">
+                <div class="question-number" id="question-number">
+                    01
+                </div>
+                <h2 id="question-text">
+                    Which country has the most natural lakes?
+                </h2>
+            </div>
+            <div id="answers" class="answers"></div>
+            <div class="feedback-box">
+                <div class="feedback-content">
+                    <span class="feedback-icon">?</span>
+                    <p id="feedback">Choose an answer</p>
+                </div>
+                <button
+                    id="next-button"
+                    class="next-button"
+                    type="button"
+                    disabled>
+                    Next question
+                    <span>→</span>
+                </button>
+            </div>
+        </div>
+        <div id="results-view" class="results-view hidden">
+            <div class="result-icon">
+                <span id="result-emoji">🏆</span>
+            </div>
+            <p class="result-label">CHALLENGE COMPLETE</p>
+            <h2 id="result-title">Nice work!</h2>
+            <p class="result-copy" id="result-copy">
+                You scored 4 out of 5.
+            </p>
+            <div class="result-stats">
+                <div class="result-stat">
+                    <strong id="final-score">4</strong>
+                    <span>Correct</span>
+                </div>
+                <div class="result-stat">
+                    <strong id="final-percent">80%</strong>
+                    <span>Accuracy</span>
+                </div>
+                <div class="result-stat">
+                    <strong id="final-total">5</strong>
+                    <span>Questions</span>
+                </div>
+            </div>
+            <button
+                id="restart-button"
+                class="restart-button"
+                type="button">
+                Play again
+                <span>↗</span>
+            </button>
+        </div>
+    </section>
+    <p class="credit">Questions courtesy of
+        <a
+            href="https://opentdb.com/"
+            target="_blank"
+            rel="noreferrer">
+            Open Trivia DB
+        </a>
+    </p>
+</main>
+<script src="quiz.js" defer></script>
+</body>
+</html>
